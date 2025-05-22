@@ -1,0 +1,313 @@
+/* style.css - Simple, beginner-friendly styles for a mobile-first travel website */
+
+/* Beginner-friendly, eco-friendly color palette and easy-to-read fonts */
+body {
+  font-family: 'Segoe UI', Verdana, Arial, sans-serif; /* Main font: Segoe UI, fallback to Verdana/Arial */
+  margin: 0;
+  padding: 0;
+  background: #eafaf1; /* Soft green background */
+  color: #23424a; /* Deep blue-green for text */
+}
+
+/* Responsive Navbar: horizontal on large screens, vertical dropdown on small screens */
+header {
+  background: #7ed6a2; /* Soft green for header */
+  color: #23424a;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 0;
+}
+
+.logo {
+  font-family: 'Segoe UI', Verdana, Arial, sans-serif;
+  display: inline-block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  padding: 16px 20px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* Navbar container for flex layout */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  margin: 0 20px 0 0;
+}
+
+.navbar a {
+  color: #23424a;
+  background: #b3e0f2; /* Soft blue for nav links */
+  text-decoration: none;
+  padding: 16px 12px;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 4px 4px 0 0;
+  transition: background 0.2s;
+}
+
+.navbar a:hover {
+  background: #a0d8ef; /* Slightly deeper blue on hover */
+}
+
+/* Hamburger menu button - hidden on large screens */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2em;
+  padding: 16px 20px 16px 0;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  header {
+    text-align: left;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    display: none; /* Hide menu by default on small screens */
+    background: #7ed6a2; /* Soft green for header */
+    margin: 0;
+    padding: 0 0 10px 0;
+  }
+  .navbar.active {
+    display: flex; /* Show menu when active */
+  }
+  .navbar a {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 0;
+    font-size: 1em;
+  }
+  .menu-toggle {
+    display: inline-block;
+  }
+  .logo {
+    display: inline-block;
+    padding: 16px 20px 0 20px;
+  }
+}
+
+/* Navigation styles */
+nav {
+  margin-top: 8px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1em;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Section styles */
+section {
+  padding: 20px 10px;
+  margin: 10px auto;
+  max-width: 400px; /* Keeps content easy to read on larger screens */
+  background: #ffffff;
+  border: 1px solid #b3e0f2;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+/* Registration form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 8px 0 4px 0;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  background: #7ed6a2; /* Soft green */
+  color: #23424a;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #5ec48d; /* Slightly deeper green */
+}
+
+/* Hero section fills the whole screen and centers content */
+.hero {
+  background: #b3e0f2;         /* Soft blue background */
+  color: #23424a;              /* Easy to read text color */
+  width: 100vw;                /* Full viewport width */
+  max-width: none;             /* Remove any max-width limit */
+  min-height: 100vh;           /* Fill the whole screen vertically */
+  display: flex;               /* Use flexbox to center content */
+  flex-direction: column;      /* Stack headline and paragraph vertically */
+  justify-content: center;     /* Center content vertically */
+  align-items: center;         /* Center content horizontally */
+  text-align: center;          /* Center text */
+  margin: 0;                   /* Remove default margin */
+  padding: 0 20px;             /* Add some space on the sides */
+  box-sizing: border-box;      /* Include padding in width */
+}
+
+.hero h2 {
+  font-size: 2em;              /* Make headline bigger */
+  margin-bottom: 16px;         /* Space below headline */
+}
+
+.hero p {
+  font-size: 1.1em;            /* Slightly bigger text */
+  max-width: 500px;            /* Limit width for easy reading */
+  margin: 0;                   /* Remove default margin */
+}
+
+.hero-btn {
+  background: #7ed6a2; /* Soft green */
+  color: #23424a;      /* Deep blue-green text */
+  border: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hero-btn:hover {
+  background: #5ec48d; /* Slightly deeper green on hover */
+}
+
+/* Destination Cards Section */
+.destinations {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px 10px;
+}
+
+.destinations h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically on mobile */
+  gap: 20px; /* Space between cards */
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #b3e0f2;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 16px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  max-width: 100%; /* Make images responsive */
+  height: auto;     /* Keep image aspect ratio */
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Desktop: cards align horizontally */
+@media (min-width: 700px) {
+  .card-list {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .card {
+    flex: 1 1 0;
+    max-width: 300px;
+  }
+}
+
+/* Search Bar Section styles */
+.search-section {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px 10px;
+  background: #ffffff;
+  border: 1px solid #b3e0f2;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.search-button {
+  background: #7ed6a2;
+  color: #23424a;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background: #5ec48d;
+}
+
+@media (min-width: 600px) {
+  /* Adjust layout and spacing for wider screens */
+  .card-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px; /* More space between cards on desktop */
+  }
+  .card {
+    max-width: 300px;
+    margin: 0 8px;
+  }
+  .search-section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 32px 20px;
+  }
+  .hero {
+    padding: 0 40px;
+  }
+}
